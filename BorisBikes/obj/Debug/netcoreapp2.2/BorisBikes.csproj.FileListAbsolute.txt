@@ -1,0 +1,11 @@
+C:\Users\Kay\source\repos\BorisBikes\BorisBikes\bin\Debug\netcoreapp2.2\BorisBikes.deps.json
+C:\Users\Kay\source\repos\BorisBikes\BorisBikes\bin\Debug\netcoreapp2.2\BorisBikes.runtimeconfig.json
+C:\Users\Kay\source\repos\BorisBikes\BorisBikes\bin\Debug\netcoreapp2.2\BorisBikes.runtimeconfig.dev.json
+C:\Users\Kay\source\repos\BorisBikes\BorisBikes\bin\Debug\netcoreapp2.2\BorisBikes.dll
+C:\Users\Kay\source\repos\BorisBikes\BorisBikes\bin\Debug\netcoreapp2.2\BorisBikes.pdb
+C:\Users\Kay\source\repos\BorisBikes\BorisBikes\obj\Debug\netcoreapp2.2\BorisBikes.csprojAssemblyReference.cache
+C:\Users\Kay\source\repos\BorisBikes\BorisBikes\obj\Debug\netcoreapp2.2\BorisBikes.csproj.CoreCompileInputs.cache
+C:\Users\Kay\source\repos\BorisBikes\BorisBikes\obj\Debug\netcoreapp2.2\BorisBikes.AssemblyInfoInputs.cache
+C:\Users\Kay\source\repos\BorisBikes\BorisBikes\obj\Debug\netcoreapp2.2\BorisBikes.AssemblyInfo.cs
+C:\Users\Kay\source\repos\BorisBikes\BorisBikes\obj\Debug\netcoreapp2.2\BorisBikes.dll
+C:\Users\Kay\source\repos\BorisBikes\BorisBikes\obj\Debug\netcoreapp2.2\BorisBikes.pdb

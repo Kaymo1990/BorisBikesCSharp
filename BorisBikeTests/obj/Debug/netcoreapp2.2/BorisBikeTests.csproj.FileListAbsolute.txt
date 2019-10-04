@@ -1,0 +1,17 @@
+C:\Users\Kay\source\repos\BorisBikes\BorisBikeTests\bin\Debug\netcoreapp2.2\NUnit3.TestAdapter.dll
+C:\Users\Kay\source\repos\BorisBikes\BorisBikeTests\bin\Debug\netcoreapp2.2\NUnit3.TestAdapter.pdb
+C:\Users\Kay\source\repos\BorisBikes\BorisBikeTests\bin\Debug\netcoreapp2.2\nunit.engine.netstandard.dll
+C:\Users\Kay\source\repos\BorisBikes\BorisBikeTests\bin\Debug\netcoreapp2.2\BorisBikeTests.deps.json
+C:\Users\Kay\source\repos\BorisBikes\BorisBikeTests\bin\Debug\netcoreapp2.2\BorisBikeTests.runtimeconfig.json
+C:\Users\Kay\source\repos\BorisBikes\BorisBikeTests\bin\Debug\netcoreapp2.2\BorisBikeTests.runtimeconfig.dev.json
+C:\Users\Kay\source\repos\BorisBikes\BorisBikeTests\bin\Debug\netcoreapp2.2\BorisBikeTests.dll
+C:\Users\Kay\source\repos\BorisBikes\BorisBikeTests\bin\Debug\netcoreapp2.2\BorisBikeTests.pdb
+C:\Users\Kay\source\repos\BorisBikes\BorisBikeTests\bin\Debug\netcoreapp2.2\BorisBikes.dll
+C:\Users\Kay\source\repos\BorisBikes\BorisBikeTests\bin\Debug\netcoreapp2.2\BorisBikes.pdb
+C:\Users\Kay\source\repos\BorisBikes\BorisBikeTests\obj\Debug\netcoreapp2.2\BorisBikeTests.csprojAssemblyReference.cache
+C:\Users\Kay\source\repos\BorisBikes\BorisBikeTests\obj\Debug\netcoreapp2.2\BorisBikeTests.csproj.CoreCompileInputs.cache
+C:\Users\Kay\source\repos\BorisBikes\BorisBikeTests\obj\Debug\netcoreapp2.2\BorisBikeTests.AssemblyInfoInputs.cache
+C:\Users\Kay\source\repos\BorisBikes\BorisBikeTests\obj\Debug\netcoreapp2.2\BorisBikeTests.AssemblyInfo.cs
+C:\Users\Kay\source\repos\BorisBikes\BorisBikeTests\obj\Debug\netcoreapp2.2\BorisBikeTests.csproj.CopyComplete
+C:\Users\Kay\source\repos\BorisBikes\BorisBikeTests\obj\Debug\netcoreapp2.2\BorisBikeTests.dll
+C:\Users\Kay\source\repos\BorisBikes\BorisBikeTests\obj\Debug\netcoreapp2.2\BorisBikeTests.pdb
