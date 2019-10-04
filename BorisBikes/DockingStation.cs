@@ -4,7 +4,9 @@
     {
         public Bike ReleaseBike()
         {
-            return new Bike();
+            var bike = new Bike();
+
+            return bike;
         }
     }
 }
