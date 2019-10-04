@@ -1,5 +1,6 @@
 using BorisBikes;
 using NUnit.Framework;
+using System.Collections.Generic;
 
 namespace Tests
 {
@@ -24,6 +25,13 @@ namespace Tests
         {
             var dockingStation = new DockingStation();
             Assert.IsTrue(dockingStation.ReleaseBike().IsWorking());
+        }
+
+        [Test]
+        public void BikeDock_ShouldHave0Bikes_WhenInstantiated()
+        {
+            var dockingstation = new DockingStation();
+            Assert.AreEqual(0, dockingstation.bikeDock.Count);
         }
 
         [Category("Bike Tests")]
