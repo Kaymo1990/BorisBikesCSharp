@@ -5,10 +5,14 @@ namespace BorisBikes
 {
     public class DockingStation
     {
+        private int mAX_CAPACITY = 20;
         public List<Bike> bikeDock = new List<Bike>();
+
+        public int MAX_CAPACITY { get => mAX_CAPACITY; set => mAX_CAPACITY = value; }
+
         public Bike ReleaseBike()
         {
-            if(bikeDock.Count == 0)
+            if(IsEmpty())
             {
                 throw new Exception("No bikes available");
             }
@@ -19,7 +23,38 @@ namespace BorisBikes
 
         public void DockBike(Bike bike)
         {
+            if (IsFull())
+            {
+                throw new Exception("The bike dock is full");
+            }
             bikeDock.Add(bike);
         }
+
+        private bool IsEmpty()
+        {
+            if (bikeDock.Count == 0)
+            {
+                return true;
+            }
+
+            else
+            {
+                return false;
+            }
+        }
+
+        private bool IsFull()
+        {
+            if (bikeDock.Count == MAX_CAPACITY)
+            {
+                return true;
+            }
+
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }

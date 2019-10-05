@@ -22,6 +22,18 @@ namespace Tests
 
         [Test]
 
+        public void DockBike_ShouldRaiseException_WhenMaxBikesDocked()
+        {
+            var dockingStation = new DockingStation();
+            for(var i = 0; i < 20; i++)
+            {
+                dockingStation.DockBike(new Bike());
+            }
+            Assert.Throws<Exception>(() => dockingStation.DockBike(new Bike()));
+        }
+
+        [Test]
+
         public void ReleaseBike_ShouldReturnBike_WhenCalled()
         {
             var dockingStation = new DockingStation();
