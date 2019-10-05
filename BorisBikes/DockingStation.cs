@@ -25,9 +25,10 @@ namespace BorisBikes
             {
                 throw new Exception("Can't take out broken bike");
             }
+
+                var bikeToReturn = bikeDock[bikeDock.Count - 1];
                 bikeDock.RemoveAt(bikeDock.Count - 1);
-                var bike = new Bike();
-                return bike;
+                return bikeToReturn;
         }
 
         public void DockBike(Bike bike)

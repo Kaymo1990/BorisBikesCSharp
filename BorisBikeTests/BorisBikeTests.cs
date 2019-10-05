@@ -131,6 +131,7 @@ namespace Tests
             var brokenBike = new Bike();
             brokenBike.IsBroken();
             var dockingStation = new DockingStation();
+            dockingStation.DockBike(brokenBike);
             var van = new Van();
             van.PickupBikeForRepair(dockingStation);
             Assert.AreEqual(1, van.bikeDock.Count);
