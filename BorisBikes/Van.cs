@@ -15,5 +15,10 @@ namespace BorisBikes
             bikeDock.Add(bikeForRepair);
             dockingstation.bikeDock.RemoveAt(dockingstation.bikeDock.Count - 1);
         }
+
+        public object ReleaseBikeForRepair()
+        {
+            
+        }
     }
 }
