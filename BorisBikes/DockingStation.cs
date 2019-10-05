@@ -5,10 +5,10 @@ namespace BorisBikes
 {
     public class DockingStation
     {
-        private int mAX_CAPACITY = 20;
+        private const int mAX_CAPACITY = 20;
         public List<Bike> bikeDock = new List<Bike>();
 
-        public int MAX_CAPACITY { get => mAX_CAPACITY; set => mAX_CAPACITY = value; }
+        public int MAX_CAPACITY { get => mAX_CAPACITY; }
 
         public Bike ReleaseBike()
         {
