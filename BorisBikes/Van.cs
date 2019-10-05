@@ -12,7 +12,8 @@ namespace BorisBikes
         public void PickupBikeForRepair(DockingStation dockingstation)
         {
             Bike bikeForRepair = dockingstation.bikeDock[dockingstation.bikeDock.Count - 1];
-            bikeDock.Add(dockingstation.ReleaseBike());       
+            bikeDock.Add(bikeForRepair);
+            dockingstation.bikeDock.RemoveAt(dockingstation.bikeDock.Count - 1);
         }
     }
 }
