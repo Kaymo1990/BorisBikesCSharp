@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace BorisBikes
 {
@@ -7,9 +8,18 @@ namespace BorisBikes
         public List<Bike> bikeDock = new List<Bike>();
         public Bike ReleaseBike()
         {
-            var bike = new Bike();
+            if(bikeDock.Count == 0)
+            {
+                throw new Exception("No bikes available");
+            }
+                bikeDock.RemoveAt(bikeDock.Count - 1);
+                var bike = new Bike();
+                return bike;
+        }
 
-            return bike;
+        public void DockBike(Bike bike)
+        {
+            bikeDock.Add(bike);
         }
     }
 }

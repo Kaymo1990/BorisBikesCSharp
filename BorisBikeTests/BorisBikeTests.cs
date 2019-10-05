@@ -1,5 +1,6 @@
 using BorisBikes;
 using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 
 namespace Tests
@@ -13,9 +14,19 @@ namespace Tests
         [Category("DockingStation Tests")]
         [Test]
 
+        public void ReleaseBike_ShouldRaiseException_WhenNoBikesDocked()
+        {
+            var dockingStation = new DockingStation();
+            Assert.Throws<Exception>(() => dockingStation.ReleaseBike());
+        }
+
+        [Test]
+
         public void ReleaseBike_ShouldReturnBike_WhenCalled()
         {
             var dockingStation = new DockingStation();
+            var bike = new Bike();
+            dockingStation.DockBike(bike);
             Assert.IsInstanceOf(typeof(Bike), dockingStation.ReleaseBike());
         }
 
@@ -24,6 +35,8 @@ namespace Tests
         public void ReleaseBike_ShouldReturnWorkingBike_WhenIsWorkingCalled()
         {
             var dockingStation = new DockingStation();
+            var bike = new Bike();
+            dockingStation.DockBike(bike);
             Assert.IsTrue(dockingStation.ReleaseBike().IsWorking());
         }
 
