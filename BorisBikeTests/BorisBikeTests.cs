@@ -73,6 +73,16 @@ namespace Tests
             dockingStation.DockBike(bike);
             Assert.IsTrue(dockingStation.ReleaseBike().IsWorking());
         }
+        [Test]
+        public void ReleaseBike_ShouldRaiseException_WhenBikeIsBroken()
+        {
+            var dockingStation = new DockingStation(10);
+            var bike = new Bike();
+            bike.IsBroken();
+            dockingStation.DockBike(bike);
+
+            Assert.Throws<Exception>(() => dockingStation.ReleaseBike());
+        }
 
         [Test]
         public void BikeDock_ShouldHave0Bikes_WhenInstantiated()
@@ -87,6 +97,14 @@ namespace Tests
         {
             var bike = new Bike();
             Assert.IsTrue(bike.IsWorking());
+        }
+
+        [Test]
+        public void IsWorking_ShouldReturnFalse_IfBroken()
+        {
+            var bike = new Bike();
+            bike.IsBroken();
+            Assert.IsFalse(bike.IsWorking());
         }
     }
 }

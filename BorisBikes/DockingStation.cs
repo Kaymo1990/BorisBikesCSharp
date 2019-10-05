@@ -20,6 +20,11 @@ namespace BorisBikes
             {
                 throw new Exception("No bikes available");
             }
+
+            if(bikeDock[bikeDock.Count-1].bikeStatus == false)
+            {
+                throw new Exception("Can't take out broken bike");
+            }
                 bikeDock.RemoveAt(bikeDock.Count - 1);
                 var bike = new Bike();
                 return bike;
