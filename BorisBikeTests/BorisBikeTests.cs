@@ -111,6 +111,13 @@ namespace Tests
         }
 
         [Test]
+        public void IsWorking_ShouldReturnTrue_IfWorkingForFakeBike()
+        {
+            var Fakebike = new Mock<Bike>();
+            Assert.IsTrue(Fakebike.Object.bikeStatus);
+        }
+
+        [Test]
         public void IsWorking_ShouldReturnFalse_IfBroken()
         {
             var bike = new Bike();
