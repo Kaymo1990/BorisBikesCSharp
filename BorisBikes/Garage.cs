@@ -13,5 +13,13 @@ namespace BorisBikes
             var bikeToRepair = van.ReleaseBikeForRepair();
             bikeDock.Add(bikeToRepair);
         }
+
+        public void RepairBikes()
+        {
+            for (var i = 0; i < bikeDock.Count; i++)
+            {
+                bikeDock[i].bikeStatus = true;
+            }
+        }
     }
 }

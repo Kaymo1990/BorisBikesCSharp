@@ -26,5 +26,18 @@ namespace BorisBikes
             bikeDock.RemoveAt(bikeDock.Count - 1);
             return bikeForRepair;
         }
+
+        public void PickupRepairedBike(Garage garage)
+        {
+            var repairedBike = garage.bikeDock[garage.bikeDock.Count - 1];
+            bikeDock.Add(repairedBike);
+            garage.bikeDock.RemoveAt(garage.bikeDock.Count - 1);
+        }
+
+        public void ReDockRepairedBike(DockingStation dockingStation)
+        {
+            dockingStation.DockBike(bikeDock[bikeDock.Count - 1]);
+            bikeDock.RemoveAt(bikeDock.Count - 1);
+        }
     }
 }

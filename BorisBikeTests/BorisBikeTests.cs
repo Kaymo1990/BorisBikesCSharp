@@ -157,6 +157,39 @@ namespace Tests
             Assert.Throws<Exception>(() => van.ReleaseBikeForRepair());
         }
 
+        [Test]
+        public void VanPicksUpRepairedBike_PicksUpRepairedBikes_RemoveRepairedBikeFromGarage()
+        {
+            var brokenBike = new Bike();
+            brokenBike.IsBroken();
+            var dockingStation = new DockingStation();
+            dockingStation.DockBike(brokenBike);
+            var van = new Van();
+            van.PickupBikeForRepair(dockingStation);
+            var garage = new Garage();
+            garage.TakeBikeForRepair(van);
+            garage.RepairBikes();
+            van.PickupRepairedBike(garage);
+            Assert.IsTrue(van.bikeDock[0].bikeStatus);
+        }
+
+        [Test]
+        public void VanReDockRepairedBike_ReDocksRepairedBikes_RemoveRepairedBikeFromVan()
+        {
+            var brokenBike = new Bike();
+            brokenBike.IsBroken();
+            var dockingStation = new DockingStation();
+            dockingStation.DockBike(brokenBike);
+            var van = new Van();
+            van.PickupBikeForRepair(dockingStation);
+            var garage = new Garage();
+            garage.TakeBikeForRepair(van);
+            garage.RepairBikes();
+            van.PickupRepairedBike(garage);
+            van.ReDockRepairedBike(dockingStation);
+            Assert.IsTrue(dockingStation.bikeDock[0].bikeStatus);
+        }
+
         [Category("Garage Tests")]
         [Test]
 
@@ -171,6 +204,20 @@ namespace Tests
             var garage = new Garage();
             garage.TakeBikeForRepair(van);
             Assert.IsInstanceOf(typeof(Bike), garage.bikeDock[garage.bikeDock.Count - 1]);
+        }
+        [Test]
+        public void RepairBikes_ShouldChangeBrokenStatusOnBikesToFalse_WhenRepaired()
+        {
+            var brokenBike = new Bike();
+            brokenBike.IsBroken();
+            var dockingStation = new DockingStation();
+            dockingStation.DockBike(brokenBike);
+            var van = new Van();
+            van.PickupBikeForRepair(dockingStation);
+            var garage = new Garage();
+            garage.TakeBikeForRepair(van);
+            garage.RepairBikes();
+            Assert.IsTrue(garage.bikeDock[0].bikeStatus);
         }
     }
 }
