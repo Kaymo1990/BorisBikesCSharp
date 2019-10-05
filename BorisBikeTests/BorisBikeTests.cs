@@ -124,5 +124,16 @@ namespace Tests
             bike.IsBroken();
             Assert.IsFalse(bike.IsWorking());
         }
+        [Category("Van tests")]
+        [Test]
+        public void VanPickUp_PickupBrokenBikes_AddToVanDock()
+        {
+            var brokenBike = new Bike();
+            brokenBike.IsBroken();
+            var dockingStation = new DockingStation();
+            var van = new Van();
+            van.PickupBikeForRepair(dockingStation);
+            Assert.AreEqual(1, van.bikeDock.Count);
+        }
     }
 }
