@@ -18,7 +18,13 @@ namespace BorisBikes
 
         public object ReleaseBikeForRepair()
         {
-            
+            if (bikeDock.Count == 0)
+            {
+                throw new Exception("No bikes held by van");
+            }
+            Bike bikeForRepair = bikeDock[bikeDock.Count - 1];
+            bikeDock.RemoveAt(bikeDock.Count - 1);
+            return bikeForRepair;
         }
     }
 }

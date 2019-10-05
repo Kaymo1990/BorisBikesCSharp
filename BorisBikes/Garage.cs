@@ -4,7 +4,13 @@ using System.Text;
 
 namespace BorisBikes
 {
-    class Class1
+    class Garage
     {
+        public List<Bike> bikeDock = new List<Bike>();
+
+        public void TakeBikeForRepair(Van van)
+        {
+            
+        }
     }
 }

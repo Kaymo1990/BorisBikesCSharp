@@ -136,5 +136,25 @@ namespace Tests
             van.PickupBikeForRepair(dockingStation);
             Assert.AreEqual(1, van.bikeDock.Count);
         }
+
+        [Test]
+        public void VanReleaseBrokenBike_ReleaseBrokenBikes_RemoveFromVanDock()
+        {
+            var brokenBike = new Bike();
+            brokenBike.IsBroken();
+            var dockingStation = new DockingStation();
+            dockingStation.DockBike(brokenBike);
+            var van = new Van();
+            van.PickupBikeForRepair(dockingStation);
+            Assert.IsInstanceOf(typeof(Bike), van.ReleaseBikeForRepair());
+        }
+
+        [Test]
+        public void VanReleaseBrokenBike_ThrowsException_When0BikesToRemove()
+        {
+
+            var van = new Van();
+            Assert.Throws<Exception>(() => van.ReleaseBikeForRepair());
+        }
     }
 }
