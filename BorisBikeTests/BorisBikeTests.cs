@@ -33,6 +33,28 @@ namespace Tests
         }
 
         [Test]
+        public void DockBike_ShouldRaiseException_WhenMax10BikesDocked()
+        {
+            var dockingStation = new DockingStation(10);
+            for (var i = 0; i <10; i++)
+            {
+                dockingStation.DockBike(new Bike());
+            }
+            Assert.Throws<Exception>(() => dockingStation.DockBike(new Bike()));
+        }
+
+        [Test]
+        public void DockBike_ShouldPass_WhenMax10BikesFor9Docked()
+        {
+            var dockingStation = new DockingStation(10);
+            for (var i = 0; i < 9; i++)
+            {
+                dockingStation.DockBike(new Bike());
+            }
+            Assert.AreEqual(9, dockingStation.bikeDock.Count);
+        }
+
+        [Test]
 
         public void ReleaseBike_ShouldReturnBike_WhenCalled()
         {
