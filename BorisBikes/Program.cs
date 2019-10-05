@@ -12,10 +12,3 @@ namespace BorisBikes
     }
 }
 
-namespace BorisBikes
-{
-}
-
-namespace BorisBikes
-{
-}
