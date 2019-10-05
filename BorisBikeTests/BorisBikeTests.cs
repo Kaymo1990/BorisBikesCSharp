@@ -156,5 +156,21 @@ namespace Tests
             var van = new Van();
             Assert.Throws<Exception>(() => van.ReleaseBikeForRepair());
         }
+
+        [Category("Garage Tests")]
+        [Test]
+
+        public void TakeBikeForRepair_AcceptsBrokenBike_FRomVan()
+        {
+            var brokenBike = new Bike();
+            brokenBike.IsBroken();
+            var dockingStation = new DockingStation();
+            dockingStation.DockBike(brokenBike);
+            var van = new Van();
+            van.PickupBikeForRepair(dockingStation);
+            var garage = new Garage();
+            garage.TakeBikeForRepair(van);
+            Assert.IsInstanceOf(typeof(Bike), garage.bikeDock[garage.bikeDock.Count - 1]);
+        }
     }
 }

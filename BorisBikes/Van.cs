@@ -16,7 +16,7 @@ namespace BorisBikes
             dockingstation.bikeDock.RemoveAt(dockingstation.bikeDock.Count - 1);
         }
 
-        public object ReleaseBikeForRepair()
+        public Bike ReleaseBikeForRepair()
         {
             if (bikeDock.Count == 0)
             {
