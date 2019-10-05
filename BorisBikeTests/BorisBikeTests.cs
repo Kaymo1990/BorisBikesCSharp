@@ -1,6 +1,7 @@
 using BorisBikes;
 using NUnit.Framework;
 using System;
+using Moq;
 using System.Collections.Generic;
 
 namespace Tests
@@ -61,6 +62,16 @@ namespace Tests
             var dockingStation = new DockingStation();
             var bike = new Bike();
             dockingStation.DockBike(bike);
+            Assert.IsInstanceOf(typeof(Bike), dockingStation.ReleaseBike());
+        }
+
+        [Test]
+
+        public void ReleaseBike_ShouldReturnFakeBike_WhenCalled()
+        {
+            var dockingStation = new DockingStation();
+            var Fakebike = new Mock<Bike>();
+            dockingStation.DockBike(Fakebike.Object);
             Assert.IsInstanceOf(typeof(Bike), dockingStation.ReleaseBike());
         }
 
